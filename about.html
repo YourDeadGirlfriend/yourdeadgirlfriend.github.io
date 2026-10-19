@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Your Dead Girlfriend</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Стили для страницы About */
+        .about-page {
+            width: min(900px, 90vw);
+            margin: 0 auto;
+            padding: 20px 0 60px;
+            color: #d2b795;
+        }
+        .about-page h1 {
+            color: #b32929;
+            font-size: 22px;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+        .about-page h2 {
+            color: #b32929;
+            font-size: 18px;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            margin: 50px 0 16px;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .about-page h2::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #755044;
+        }
+        .about-page h3 {
+            color: #cfb797;
+            font-size: 18px;
+            letter-spacing: .05em;
+            margin: 30px 0 12px;
+            font-weight: 400;
+        }
+        .about-page p {
+            font-size: 16px;
+            line-height: 1.75;
+            margin-bottom: 16px;
+            color: #d2b795;
+        }
+        .about-page .subtitle {
+            color: #b99d7e;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+        .about-page hr {
+            border: none;
+            height: 1px;
+            background: #69463b;
+            margin: 50px 0;
+        }
+        .interest-item {
+            margin-bottom: 24px;
+            padding-left: 20px;
+            border-left: 2px solid #69463b;
+        }
+        .interest-item h4 {
+            color: #cfb797;
+            font-size: 17px;
+            margin: 0 0 6px;
+            font-weight: 400;
+        }
+        .interest-item h4 span {
+            color: #b32929;
+            margin-right: 8px;
+        }
+        .interest-item p {
+            margin: 0;
+            color: #b69979;
+            font-size: 15px;
+        }
+        .tags {
+            display: inline-block;
+            background: rgba(179, 41, 41, 0.08);
+            border: 1px solid #6a4539;
+            color: #b32929;
+            padding: 6px 14px;
+            font-size: 13px;
+            letter-spacing: .12em;
+            margin: 12px 0 20px;
+        }
+        .work-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .work-list li {
+            color: #d2b795;
+            font-size: 16px;
+            line-height: 1.9;
+            margin-bottom: 8px;
+        }
+        .work-list li::before {
+            content: "→ ";
+            color: #b32929;
+        }
+        .contact-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 28px;
+            border: 1px solid #b32929;
+            color: #b32929;
+            text-decoration: none;
+            font-size: 15px;
+            letter-spacing: .1em;
+            transition: .2s;
+        }
+        .contact-btn:hover {
+            background: rgba(179, 41, 41, 0.15);
+            text-decoration: none;
+        }
+
+        /* Адаптив для текстовых страниц (отключаем мобильные хотспоты) */
+        @media (max-width: 800px) {
+            .desktop-page {
+                display: block !important;
+                width: 94vw;
+                padding: 20px 0;
+            }
+            .mobile-page {
+                display: none !important;
+            }
+            .about-page h1 { font-size: 18px; }
+            .about-page h2 { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="desktop-page">
+        <!-- Header -->
+        <header class="desktop-header">
+            <img src="./assets/logo.png" alt="Logo" class="title-art">
+            <p>THINGS I MAKE, BREAK AND OCCASIONALLY FINISH.</p>
+            <div class="ornament">✦EST.2026✟</div>
+            <div class="hairline"></div>
+        </header>
+
+        <!-- About Content -->
+        <main class="about-page">
+            <h1>About the person behind the projects.</h1>
+            
+            <p>I'm a curious, hands-on IT enthusiast drawn to the parts of technology that usually stay out of sight: how systems communicate, why things break, and how old infrastructure keeps telling stories.</p>
+            <p>I learn by making things, poking around in documentation, troubleshooting, and turning questions into small projects. I don't have everything figured out — that's half the reason I build things in the first place.</p>
+
+            <hr>
+
+            <h2>Areas of interest</h2>
+            <p class="subtitle">A few subjects I keep coming back to.</p>
+
+            <div class="interest-item">
+                <h4><span>01</span> Linux & systems</h4>
+                <p>Operating systems, administration, troubleshooting, and the useful details under the hood.</p>
+            </div>
+            <div class="interest-item">
+                <h4><span>02</span> Networks & communication</h4>
+                <p>TCP/IP, connectivity, network services, and the invisible paths between machines.</p>
+            </div>
+            <div class="interest-item">
+                <h4><span>03</span> Hardware & legacy tech</h4>
+                <p>Old computers, practical electronics, and technology that still has a reason to exist.</p>
+            </div>
+            <div class="interest-item">
+                <h4><span>04</span> Small tools & web projects</h4>
+                <p>Useful experiments, scripting, data wrangling, and interfaces built around a specific idea.</p>
+            </div>
+
+            <hr>
+
+            <h2>What I'm making</h2>
+            <h3>Payphone Map of Russia</h3>
+            <p>An interactive map and catalog of public payphones — part data project, part digital archaeology, and part attempt to document infrastructure that's slowly disappearing.</p>
+            <div class="tags">DATA · WEB DEVELOPMENT · DIGITAL PRESERVATION</div>
+            <p>More experiments will find their way here as they become real enough to share.</p>
+
+            <hr>
+
+            <h2>How I work</h2>
+            <ul class="work-list">
+                <li>Build something small enough to understand.</li>
+                <li>Diagnose before guessing.</li>
+                <li>Write down what worked — and what didn't.</li>
+                <li>Keep learning, and make the next version a little better.</li>
+            </ul>
+
+            <hr>
+
+            <h2>Have something interesting?</h2>
+            <p>Questions, obscure hardware stories, project ideas, or just a hello are welcome.</p>
+            <a href="mailto:yourdeadgirlfriend@proton.me" class="contact-btn">GET IN TOUCH ↗</a>
+        </main>
+
+        <!-- Footer -->
+        <footer class="desktop-footer">
+            <nav>
+                <a href="index.html">HOME</a>
+                <a href="about.html">ABOUT</a>
+            </nav>
+            <div class="footer-cross">✟</div>
+            <nav>
+                <a href="https://github.com/YourDeadGirlfriend" target="_blank">GITHUB</a>
+                <a href="mailto:yourdeadgirlfriend@proton.me">EMAIL</a>
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>
