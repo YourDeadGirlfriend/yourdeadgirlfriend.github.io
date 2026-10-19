@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Dead Girlfriend</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="desktop-page">
+        <header class="desktop-header">
+        <img src="./assets/logo.png" alt="Logo" class="title-art">
+            <div class="hairline"></div>
+            <p>THINGS I MAKE, BREAK AND OCCASIONALLY FINISH.</p>
+            <div class="ornament">✦</div>
+        </header>
+
+        <main class="desktop-content">
+            <div class="left-section">
+                <aside class="rail">
+                    <div class="rail-top">
+                        <span>EST.</span>
+                        <span>2026</span>
+                    </div>
+                    <div class="rail-cross">✟</div>
+                </aside>
+
+                <div class="left-column">
+                    <img src="./assets/character.png" alt="Character" class="character-art">
+                </div>
+
+                <aside class="rail rail-bottom">
+                    <div class="status">
+                        <span></span>STATUS:<br>ONLINE
+                    </div>
+                    <div class="rail-cross">✟</div>
+                </aside>
+            </div>
+
+            <div class="right-column">
+                <div class="portrait">
+               <img src="./assets/portrait.png" alt="Portrait">
+                    <div class="portrait-accent"></div>
+                </div>
+
+                <div class="projects-title">
+                    <i></i>
+                    <em>PROJECTS</em>
+                    <i></i>
+                </div>
+
+                <div class="projects-list">
+                    <a href="#" class="project" data-project="payphone map">
+                        <div class="num">01</div>
+                        <div class="divider"></div>
+                        <div class="copy">
+                            <b>PAYPHONE MAP OF RUSSIA</b>
+                            <small>Public</small>
+                        </div>
+                        <div class="arrow">→</div>
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="desktop-footer">
+            <nav>
+                <a href="#about">ABOUT</a>
+                <span>/</span>
+                <a href="mailto:yourdeadgirlfriend@proton.me">CONTACT</a>
+            </nav>
+            <div class="footer-cross">✟</div>
+            <nav>
+                <a href="https://github.com/YourDeadGirlfriend">[GITHUB]</a>
+                <a href="mailto:yourdeadgirlfriend@proton.me">[EMAIL]</a>
+            </nav>
+        </footer>
+    </div>
+
+    <div class="mobile-page">
+        <div class="mobile-canvas">
+            <img src="mobile-art.jpg" alt="Mobile Art" class="mobile-art">
+            <a href="#" class="hotspot p1" data-project="payphone map"></a>
+            <a href="https://github.com/" class="hotspot gh"></a>
+            <a href="https://soundcloud.com/" class="hotspot sc"></a>
+            <a href="mailto:you@example.com" class="hotspot em"></a>
+        </div>
+    </div>
+
+    <dialog id="projectDialog">
+        <button class="close" aria-label="Close">×</button>
+        <div class="eyebrow">PROJECT</div>
+        <h2 id="dialogTitle"></h2>
+        <p id="dialogText"></p>
+        <a id="dialogLink" href="#">OPEN PROJECT →</a>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>

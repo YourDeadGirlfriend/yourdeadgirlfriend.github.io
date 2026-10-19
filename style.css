@@ -1,0 +1,468 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: #170707;
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(circle at 50% 10%, rgba(105, 30, 30, .15), transparent 40rem), #170707;
+    color: #d2b795;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    min-height: 100vh;
+}
+
+.mobile-page {
+    display: none;
+}
+
+/* Desktop - FHD оптимизация */
+.desktop-page {
+    width: min(1600px, 94vw);
+    margin: 0 auto;
+    padding: 40px 0 30px;
+}
+
+.desktop-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hairline {
+    height: 1px;
+    width: 40%;
+    margin: 12px auto 20px;
+    background: #6b4034;
+}
+
+.title-art {
+    width: min(1100px, 80%);
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    filter: none;
+}
+
+.desktop-header p {
+    margin: 12px 0 14px;
+    font-size: 16px;
+    letter-spacing: .18em;
+    color: #c7a886;
+    text-transform: uppercase;
+}
+
+.ornament {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #c8aa88;
+}
+
+/* Основной контент */
+.desktop-content {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    position: relative;
+    align-items: start;
+}
+
+.left-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rail {
+    position: absolute;
+    left: -100px;
+    width: 80px;
+    color: #c9ae89;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: .08em;
+    text-align: center;
+}
+
+.rail-top {
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.rail-bottom {
+    bottom: 100px;
+}
+
+.rail-cross {
+    text-align: center;
+    color: #9b2222;
+    font-size: 28px;
+    margin: 16px 0;
+}
+
+.rail .status {
+    color: #b32929;
+    line-height: 1.65;
+    font-size: 13px;
+    letter-spacing: .1em;
+}
+
+.rail .status span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #b32929;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.left-column {
+    min-height: 850px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+}
+
+.character-art {
+    width: min(100%, 580px);
+    height: auto;
+    display: block;
+    align-self: end;
+    max-height: 850px;
+    object-fit: contain;
+}
+
+/* Правая колонка */
+.right-column {
+    min-width: 0;
+    padding-top: 30px;
+}
+
+.portrait{position:relative;margin:0 0 36px;border:3px solid #080606;aspect-ratio:1.84/1;overflow:hidden;background:#330c0d;width:100%}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block}
+}
+
+.portrait-accent {
+    position: absolute;
+    right: 7%;
+    top: 39%;
+    width: 70px;
+    height: 80px;
+}
+
+.portrait-accent:before,
+.portrait-accent:after {
+    content: " ";
+    position: absolute;
+    right: 0;
+    height: 5px;
+    background: #d3bda2;
+    transform: rotate(-32deg);
+}
+
+.portrait-accent:before {
+    width: 43px;
+    top: 12px;
+}
+
+.portrait-accent:after {
+    width: 36px;
+    top: 45px;
+}
+
+.projects-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #b32929;
+    font-size: 18px;
+    letter-spacing: .32em;
+    margin: 0 14px 16px;
+}
+
+.projects-title i {
+    display: block;
+    height: 1px;
+    background: #755044;
+    flex: 1;
+}
+
+.projects-title em {
+    font-style: normal;
+    font-size: 22px;
+    color: #b9a184;
+}
+
+.project {
+    display: grid;
+    grid-template-columns: 60px 1px minmax(0, 1fr) 40px;
+    gap: 18px;
+    min-height: 130px;
+    align-items: center;
+    padding: 18px 10px;
+    border-top: 1px solid #69463b;
+    border-bottom: 1px solid #69463b;
+    color: inherit;
+    text-decoration: none;
+    transition: .18s ease;
+}
+
+.project:hover {
+    background: rgba(116, 27, 27, .12);
+    transform: translateX(3px);
+}
+
+.num {
+    font-size: 20px;
+    color: #b32929;
+    font-weight: 400;
+}
+
+.divider {
+    width: 1px;
+    height: 86%;
+    background: #765447;
+}
+
+.copy {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.copy b {
+    font-size: 19px;
+    font-weight: 400;
+    letter-spacing: .04em;
+    color: #cfb797;
+}
+
+.copy small {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #b69979;
+}
+
+.arrow {
+    justify-self: end;
+    color: #b32929;
+    font-size: 28px;
+}
+
+/* Футер */
+.desktop-footer {
+    margin-top: 24px;
+    padding: 20px 4px 4px;
+    border-top: 1px solid #b32929;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    color: #b32929;
+    font-size: 14px;
+    letter-spacing: .06em;
+}
+
+.desktop-footer nav {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.desktop-footer nav:last-child {
+    justify-content: flex-end;
+}
+
+.desktop-footer a {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity .2s;
+}
+
+.desktop-footer a:hover {
+    opacity: .7;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.footer-cross {
+    font-size: 28px;
+    color: #c8aa88;
+}
+
+/* Модальное окно */
+.close {
+    float: right;
+    border: 0;
+    background: none;
+    color: #d2b795;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+#projectDialog {
+    width: min(560px, calc(100vw - 32px));
+    border: 1px solid #6a4539;
+    border-radius: 0;
+    background: #1a0809;
+    color: #d2b795;
+    padding: 32px;
+    line-height: 1.6;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, .65);
+}
+
+#projectDialog::backdrop {
+    background: rgba(0, 0, 0, .72);
+}
+
+#dialogTitle {
+    font: 400 22px/1.25 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    margin: 10px 0 14px;
+    color: #cfb797;
+}
+
+#dialogText {
+    color: #b99d7e;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+#dialogLink {
+    color: #b32929;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+#dialogLink:hover {
+    text-decoration: underline;
+}
+
+.eyebrow {
+    color: #b32929;
+    font-size: 12px;
+    letter-spacing: .18em;
+}
+
+/* Адаптив */
+@media (max-width: 1400px) {
+    .desktop-page {
+        width: 94vw;
+    }
+    
+    .desktop-content {
+        gap: 40px;
+    }
+    
+    .character-art {
+        width: min(100%, 500px);
+    }
+    
+    .left-column {
+        min-height: 750px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .desktop-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    
+    .rail {
+        left: -70px;
+        width: 60px;
+        font-size: 12px;
+    }
+    
+    .character-art {
+        width: min(100%, 450px);
+    }
+    
+    .left-column {
+        min-height: 700px;
+    }
+    
+    .copy b {
+        font-size: 17px;
+    }
+    
+    .copy small {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .desktop-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .rail {
+        display: none;
+    }
+    
+    .character-art {
+        width: 90%;
+        max-width: 500px;
+    }
+    
+    .left-column {
+        min-height: 600px;
+    }
+    
+    .project {
+        grid-template-columns: 50px 1px minmax(0, 1fr) 30px;
+        gap: 14px;
+    }
+}
+
+/* Мобильная версия */
+@media (max-width: 800px) {
+    .desktop-page {
+        display: none;
+    }
+    
+    .mobile-page {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .mobile-canvas {
+        position: relative;
+        width: 100vw;
+        max-width: 1024px;
+    }
+    
+    .mobile-art {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    .hotspot {
+        position: absolute;
+        z-index: 2;
+    }
+    
+    .p1 { left: 45.3%; top: 43.5%; width: 48%; height: 8.5%; }
+    .gh { left: 62%; top: 93.3%; width: 9.8%; height: 2.8%; }
+    .sc { left: 73.1%; top: 93.3%; width: 15%; height: 2.8%; }
+    .em { left: 88.1%; top: 93.3%; width: 9.4%; height: 2.8%; }
+}
+
+@media (min-width: 801px) {
+    body {
+        min-width: 800px;
+    }
+}
