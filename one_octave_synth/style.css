@@ -610,3 +610,47 @@ body {
   text-wrap: balance;
 }
 
+
+/* YDG × FRAKTUR */
+
+.synth-title {
+  font-family: "Fruktur", serif;
+  font-size: clamp(52px, 6vw, 76px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+
+  color: #cfb797;
+  text-shadow: 0 0 18px rgba(179, 41, 41, .16);
+
+  margin: 0 0 12px;
+}
+
+.synth-subtitle {
+  /* Подпись остаётся в общей моноширинной системе YDG */
+  font-family: inherit;
+  font-size: clamp(10px, .9vw, 12px);
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: .055em;
+
+  color: #b69979;
+  text-transform: uppercase;
+
+  max-width: 100%;
+  padding: 0 12px;
+  margin: 12px auto 14px;
+  text-wrap: balance;
+}
+
+@media (max-width: 700px) {
+  .synth-title {
+    font-size: clamp(44px, 12vw, 58px);
+  }
+
+  .synth-subtitle {
+    font-size: 10px;
+    letter-spacing: .035em;
+  }
+}
+
