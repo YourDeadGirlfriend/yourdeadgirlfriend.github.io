@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ЭМИ — SYNTHESIZER ✟</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="synth-page">
+  <!-- Rail Left -->
+  <div class="rail rail-left">
+    <div class="rail-top">
+      <div class="status"><span></span>STATUS:<br>ONLINE</div>
+      <div class="rail-cross">✟</div>
+      <div>EST.1985</div>
+    </div>
+    <div class="rail-bottom">
+      <div>✟</div>
+      <div>SOVIET<br>SYNTH</div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="synth-header">
+    <h1 class="synth-title">ЭМИ</h1>
+    <div class="hairline"></div>
+    <p class="synth-subtitle">ДЕТСКИЙ ЭЛЕКТРОМУЗЫКАЛЬНЫЙ ИНСТРУМЕНТ</p>
+    <div class="ornament"> ✦ ✟</div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="synth-content">
+    <!-- Left Column: Visual -->
+    <div class="synth-left">
+      <div class="synth-portrait">
+        <canvas id="synthVisual" width="600" height="340"></canvas>
+        <div class="portrait-accent"></div>
+      </div>
+    </div>
+
+    <!-- Right Column: Controls & Keys -->
+    <div class="synth-right">
+      <!-- Waveform Section (compact) -->
+      <div class="waveform-section">
+        <div class="projects-title">
+          <em>✦</em> ФОРМА ВОЛНЫ <i></i>
+        </div>
+        <div class="waveform-inner">
+          <div class="waveform-screen">
+            <canvas id="waveformCanvas" width="200" height="60"></canvas>
+          </div>
+          <div class="waveform-buttons">
+            <button class="wave-btn active" data-wave="sine">
+              <span class="wave-num">01</span>
+              <span class="wave-copy">
+                <b>SINE</b>
+              </span>
+              <span class="wave-arrow">→</span>
+            </button>
+            <button class="wave-btn" data-wave="square">
+              <span class="wave-num">02</span>
+              <span class="wave-copy">
+                <b>SQUARE</b>
+              </span>
+              <span class="wave-arrow">→</span>
+            </button>
+            <button class="wave-btn" data-wave="sawtooth">
+              <span class="wave-num">03</span>
+              <span class="wave-copy">
+                <b>SAW</b>
+              </span>
+              <span class="wave-arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Knobs Section -->
+      <div class="knobs-section">
+        <div class="projects-title">
+          <em>✦</em> РЕГУЛЯТОРЫ <i></i>
+        </div>
+        <div class="knobs-grid">
+          <div class="knob-card">
+            <div class="knob" id="lrKnob"></div>
+            <div class="knob-info">
+              <b>L / R</b>
+              <small>Баланс стерео</small>
+              <div class="lr-indicator">
+                <span id="lrL">Л</span>
+                <span id="lrR">П</span>
+              </div>
+            </div>
+          </div>
+          <div class="knob-card">
+            <div class="knob" id="volKnob"></div>
+            <div class="knob-info">
+              <b>ГРОМК.</b>
+              <small>Уровень сигнала</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Keyboard Section -->
+      <div class="keyboard-section">
+        <div class="projects-title">
+          <em>✦</em> КЛАВИАТУРА <i></i>
+        </div>
+        <div class="keys-container" id="keysContainer"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="synth-footer">
+    <nav>
+      <a href="#about">ABOUT</a>
+      <a href="#keys">KEYS</a>
+    </nav>
+    <div class="footer-cross">✟</div>
+    <nav>
+      <a href="https://github.com">GITHUB</a>
+      <a href="mailto:emi@synth.ru">EMAIL</a>
+    </nav>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
