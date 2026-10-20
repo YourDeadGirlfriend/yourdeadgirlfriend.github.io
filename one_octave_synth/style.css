@@ -581,32 +581,32 @@ body {
 }
 
 
-/* YDG typography refinement */
+
+/* YDG typography — integrated, not standalone */
 
 .synth-title {
-  font-family: "IBM Plex Mono", "Courier New", ui-monospace, monospace;
-  font-size: clamp(42px, 5.4vw, 64px);
+  font-family: inherit;
+  font-size: clamp(32px, 3vw, 40px);
   font-weight: 400;
-  line-height: 1.08;
-  letter-spacing: .12em;
-  padding-left: .12em;
-  margin-bottom: 8px;
+  line-height: 1.2;
+  letter-spacing: .04em;
   color: #cfb797;
-  text-shadow: 0 0 24px rgba(179, 41, 41, .17);
+  text-shadow: none;
+  margin: 0 0 10px;
 }
 
 .synth-subtitle {
-  font-family: "IBM Plex Mono", "Courier New", ui-monospace, monospace;
-  font-size: clamp(10px, 1vw, 13px);
+  font-family: inherit;
+  font-size: 12px;
   font-weight: 400;
-  line-height: 1.75;
-  letter-spacing: .065em;
-  color: #c7a886;
+  line-height: 1.7;
+  letter-spacing: .045em;
   text-transform: uppercase;
+  color: #b69979;
 
   max-width: 100%;
+  padding: 0 8px;
   margin: 12px auto 14px;
-  padding: 0 10px;
-
   text-wrap: balance;
 }
+
