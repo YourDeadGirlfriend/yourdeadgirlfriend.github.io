@@ -663,11 +663,12 @@ function getGeoFeatureRegion(context) {
 }
 
 function getColor(count) {
-    if (!count) return 0xF3F4F6;   // 0 — светло-серый
-    if (count <= 150) return 0xBFDBFE; // 1–150 — светло-голубой
-    if (count <= 350) return 0x60A5FA; // 151–350 — голубой
-    if (count <= 600) return 0x2563EB; // 351–600 — насыщенный синий
-    return 0x1E3A8A;                   // 601+ — тёмно-синий
+    // Палитра PayPhone 2077 / YDG
+    if (!count) return 0x2A1212;       // 0 — тёмный бордовый
+    if (count <= 150) return 0x59302B; // 1–150 — тёмная глина
+    if (count <= 350) return 0x8E4C3F; // 151–350 — терракота
+    if (count <= 600) return 0xBF7657; // 351–600 — тёплая медь
+    return 0xEAD0AB;                   // 601+ — светлый беж
 }
 function updateAmChart() {
     if (!amChartSeries || !mapReady || typeof am5 === 'undefined') return;
