@@ -7,7 +7,7 @@ const data = {
     "payphone map": [
         "PAYPHONE MAP OF RUSSIA",
         "Public project.",
-        "/PayPhone2077/"
+        "https://yourdeadgirlfriend.github.io/PayPhone2077/"
     ]
 };
 
