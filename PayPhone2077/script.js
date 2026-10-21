@@ -622,8 +622,17 @@ function initAmChart() {
             homeGeoPoint: { longitude: 100, latitude: 65 }, homeZoomLevel: 1.8
         }));
         const series = chart.series.push(am5map.MapPolygonSeries.new(root, { geoJSON: am5geodata_russiaLow, exclude: ['AQ'] }));
-        series.mapPolygons.template.setAll({ tooltipText: '{name}', interactive: true, fill: am5.color(0xF3F4F6), stroke: am5.color(0xFFFFFF), strokeWidth: 0.7 });
-        series.mapPolygons.template.states.create('hover', { fill: am5.color(0xD1D5DB) });
+series.mapPolygons.template.setAll({
+    tooltipText: '{name}',
+    interactive: true,
+    fill: am5.color(0x2A1212),
+    stroke: am5.color(0x68433A),
+    strokeWidth: 0.8
+});
+
+series.mapPolygons.template.states.create('hover', {
+    fill: am5.color(0xF0D7B0)
+});
         series.mapPolygons.template.events.on('click', event => {
             const context = event.target?.dataItem?.dataContext;
             const region = getGeoFeatureRegion(context);
