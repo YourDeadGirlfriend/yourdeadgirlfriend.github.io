@@ -414,7 +414,7 @@ function updateHierarchyContext(cells, context) {
     if (candidateRegion && normalizeText(candidateRegion) !== normalizeText(context.region)) {
         context.region = candidateRegion; context.municipality = ''; context.settlement = ''; context.locality = '';
     }
-    const values = ['municipality', 'settlement', 'locality'];
+    const values = ['municipality', 'settlement', 'locality']; 
     const indexes = [1, 2, 3];
     for (let i = 0; i < indexes.length; i++) {
         const field = values[i];
