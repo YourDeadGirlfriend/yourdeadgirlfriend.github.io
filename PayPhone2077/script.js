@@ -591,9 +591,11 @@ async function handleFile(file) {
             allRecords.push(...result.records);
             recordId = result.nextId;
         }
-        pdfLoaded = true;
-        rebuildRegionCounts();
-        updateUI();
+      pdfLoaded = true;
+tableExpanded = true;
+
+rebuildRegionCounts();
+updateUI();
         if (!layout) progress.textContent = 'Не удалось найти заголовки шести колонок.';
         else if (!allRecords.length) progress.textContent = 'Заголовки найдены, но номера телефонов не распознаны.';
         else progress.textContent = `Готово! Извлечено ${allRecords.length} записей.`;
