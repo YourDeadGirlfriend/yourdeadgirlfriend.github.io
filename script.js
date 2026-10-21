@@ -3,13 +3,7 @@ const title = document.querySelector('#dialogTitle');
 const text = document.querySelector('#dialogText');
 const link = document.querySelector('#dialogLink');
 
-const data = {
-    "payphone map": [
-        "PAYPHONE MAP OF RUSSIA",
-        "Public project.",
-        "https://yourdeadgirlfriend.github.io/PayPhone2077/"
-    ]
-};
+
 
 document.querySelectorAll('[data-project]').forEach(el => {
     el.addEventListener('click', e => {
