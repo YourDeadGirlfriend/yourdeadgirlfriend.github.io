@@ -7,16 +7,18 @@ const link = document.querySelector('#dialogLink');
 
 document.querySelectorAll('[data-project]').forEach(el => {
     el.addEventListener('click', e => {
-        e.preventDefault();
         const key = el.dataset.project;
         const d = data[key];
-        
-        if (d) {
-            title.textContent = d[0];
-            text.textContent = d[1];
-            link.href = d[2];
-            dialog.showModal();
-        }
+
+        // Не блокируем обычные ссылки.
+        if (!d) return;
+
+        e.preventDefault();
+
+        title.textContent = d[0];
+        text.textContent = d[1];
+        link.href = d[2];
+        dialog.showModal();
     });
 });
 
