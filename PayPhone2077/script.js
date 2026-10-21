@@ -487,8 +487,49 @@ function clearRegionCounts() { Object.keys(regionCounts).forEach(key => delete r
 function rebuildRegionCounts() { clearRegionCounts(); for (const record of allRecords) { if (record.region) regionCounts[record.region] = (regionCounts[record.region] || 0) + 1; } }
 
 document.addEventListener('DOMContentLoaded', () => {
-    initAmChart(); setupUpload(); setupFilters(); setupMapDownload(); renderTable(); updateAnalytics();
+    initAmChart();
+    setupUpload();
+    setupFilters();
+    setupMapDownload();
+    renderTable();
+    updateAnalytics();
+
+    // Автоматически загружаем PDF при открытии страницы.
+    loadBundledPDF();
 });
+
+async function loadBundledPDF() {
+    const progress = document.getElementById('progressInfo');
+
+    try {
+        if (progress) {
+            progress.textContent = 'Загрузка PDF с сервера...';
+        }
+
+        const response = await fetch('./payphones-2026-07-01.pdf');
+
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+
+        const blob = await response.blob();
+
+        const file = new File(
+            [blob],
+            'payphones-2026-07-01.pdf',
+            { type: 'application/pdf' }
+        );
+
+        await handleFile(file);
+    } catch (error) {
+        console.error('Ошибка автоматической загрузки PDF:', error);
+
+        if (progress) {
+            progress.textContent =
+                'Не удалось загрузить PDF. Проверьте имя файла и путь.';
+        }
+    }
+}
 
 function toggleSection(id) {
     const number = String(id).replace('section', '');
